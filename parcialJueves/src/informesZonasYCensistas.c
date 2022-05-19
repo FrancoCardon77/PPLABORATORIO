@@ -44,7 +44,7 @@ int printCargaDeDatos(Zona * zonas, int len, Censista * censistas){
 int asignarZonaACensar(Censista* censistas, int len, Zona* zonas)
 {
 	int retorno = -1;
-	int flag = 0;
+	int flag = 1;
 	int idZona;
 	int idDelCensista;
 	int zonaPosicion;
@@ -56,6 +56,7 @@ int asignarZonaACensar(Censista* censistas, int len, Zona* zonas)
 		{
 			if(zonas[i].estado == PENDIENTE && zonas[i].isEmpty == 0 && idZona == zonas[i].idZona)
 			{	zonaPosicion = i;
+				flag = 0;
 				for(int j=0;j < len;j++)
 				{
 					if(zonas[i].idZona == censistas[j].idZona && censistas[j].estado == ACTIVO)
@@ -189,3 +190,9 @@ int printZonasCaseOcho(Zona * zonas, int len, Censista *censistas)
 	}
 	return retorno;
 }
+
+//Informar cantidad de censistas en estado Activo con zona Pendiente
+
+
+
+

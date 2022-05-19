@@ -19,4 +19,5 @@ int printCargaDeDatos(Zona * zonas, int len, Censista * censista);
 int asignarZonaACensar(Censista* censistas, int len, Zona* zonas);
 int cargarDatos(Zona * zonas,int len, Censista * censistas);
 
+
 #endif /* INFORMESZONASYCENSISTAS_H_ */
